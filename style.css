@@ -1,0 +1,217 @@
+
+.btn-1{
+    background-color: blue;
+    padding: 10px;
+    color: red;
+    font-weight: bolder;
+    border-radius: 17px;
+    border: 2px solid red;
+
+}
+.top-heading{
+    color: blueviolet;
+    font-weight: bolder;
+    text-align: center;
+}
+.button{
+    margin: auto;
+    max-width: 100%;
+    width: 50%;
+    padding: 2rem;
+    border-radius: 50px;
+    flex-grow: grow;
+}
+#red{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+#grey{
+    background-color: grey;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+#green{
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+#yellow{
+    background-color: yellow;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+.container{
+    display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+.container1 {
+    background-color: grey;
+    padding-top: 6px;
+    padding-bottom: 1rem;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.container2 {
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 8%;
+    padding: 1.5rem 1rem;
+    border: var(--black) solid 2px;
+    justify-content: center;
+    align-items: center;
+    background: rebeccapurple;
+  }
+
+
+  .container2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    z-index: 0;
+    border-style: solid;
+    border-width: 1.625rem 1.5rem 0 0;
+    top: -2.5rem;
+    left: 67%;
+    padding: 24px;
+    margin-left: -3.0938rem;
+    display: block;
+    transform: rotate(356deg) translate(9px, -0.1875rem);
+    clip-path: polygon(29% 81%, 0% 100%, 58% 101%);
+    background: white;
+}
+ .bubble {
+    position: relative;
+    background: var(--white);
+    color: var(--black);
+    box-shadow: rgb(163, 163, 163) 0px 0px 27px -4px;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    box-shadow: 0px 0px transparent !important;
+    text-align: center;
+    /* width: 15.625rem; */
+    height: auto;
+    border-radius: 8px;
+    padding: 0px;
+    padding: 0.8rem 1rem;
+    filter: drop-shadow(0px 0px 3px #a3a3a3);
+}
+.bubble:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0 1.3rem 1.8rem 0;
+    border-color: transparent white transparent transparent;
+    top: -1.7rem;
+    left: 37%;
+    margin-left: -0.9688rem;
+    background-color: white;
+    clip-path: polygon(52% 73%, 0% 100%, 100% 100%);
+}
+ .bubble {
+    position: relative;
+    background: var(--white);
+    color: var(--black);
+    box-shadow: rgb(163, 163, 163) 0px 0px 27px -4px;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    position: relative;
+    background: white;
+    color: black;
+    /* box-shadow: 0px 0px 7px 3px #A3A3A3; */
+    box-shadow: 0px 0px transparent !important;
+    text-align: center;
+    /* width: 15.625rem; */
+    height: auto;
+    padding: 0px;
+    padding: 0.8rem 1rem;
+    filter: drop-shadow(0px 0px 3px #a3a3a3)
+}
+/* .container2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 1.5rem 1.875rem 0 0;
+    border-color: var(--white) transparent transparent transparent;
+    bottom: -1.3rem;
+    left: 64%;
+    margin-left: -2.9688rem;
+    transform: rotate(356deg) translate(6px, -0.1875rem);
+} */
+  /* .darker {
+    border-color: #ccc;
+    background-color: #ddd;
+  }
+  .container2::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+  /* .time-right {
+    float: right;
+    color: #aaa;
+  }
+  .container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  } */
+  /* .darker {
+    border-color: #ccc;
+    background-color: white;
+    width: fit-content;
+} */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+
+  .time {
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+.clock {
+  background: orange;
+  border: 2px solid;
+  max-width: 10%;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: auto;
+  margin-top: 1rem;
+  display: block;
+  color: white;
+}
+.wrapper {
+  margin: auto;
+  text-align: center;
+  background: beige;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  max-width: fit-content;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1rem;
+}
