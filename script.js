@@ -436,3 +436,68 @@ function newGame(){
     })
 
 }
+
+
+//     Project-5 Image hider
+ const hider = document.querySelector('.img-list');
+ hider.addEventListener('click', function(e){
+    e.target.parentNode.remove(e); //     ParentNode s pura tag select hota hai
+    
+ },false)
+
+
+//     Project-6 Random color generator and by clicking the button to change the color automatic and also there one stop button
+const randomColor = function(){
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0 ; i < 6; i++ ){
+        color += hex[Math.floor(Math.random()*16)];
+    }
+    return color;
+
+  
+};
+// console.log(randomColor()); 
+let intervalid;
+startchangingcolor = function() {
+    const colorchange = document.querySelector('.colorchanger');
+
+  intervalid =    setInterval(changebgcolor ,1000);
+ function  changebgcolor (){
+    colorchange.style.backgroundColor = randomColor();
+}
+
+}
+
+stopchangingcolor = function() {
+    clearInterval(intervalid); // reference of settimeout()
+    console.log('stopped');
+ }
+
+
+const start = document.querySelector('#start').addEventListener('click',startchangingcolor);
+const stop = document.querySelector('#stop').addEventListener('click',stopchangingcolor);
+
+//     Project-7 keyboard key check
+const insert = document.querySelector('.insert');
+window.addEventListener('keydown',(e) => {
+    insert.innerHTML = `
+    <div class = "table" >
+<table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+     </div>
+     `;
+    console.log(e.key);
+
+});

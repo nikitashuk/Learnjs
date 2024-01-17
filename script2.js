@@ -44,3 +44,12 @@ FirstList1.remove()
 
 const secondList1 = document.querySelector('li:nth-child(2)')
 secondList1.remove()
+
+// setTimeOut function
+ const fut =   setTimeout(function(){
+
+
+}, 2000)
+
+// setTimeOut function ko rukne k leye
+clearTimeout(fut);
