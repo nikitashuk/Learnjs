@@ -280,7 +280,7 @@ buttons.forEach(function  (button) {
    })
 })
 
-//     Project-2 BMI Generator
+//     Project-2 BMI Generator   //
 
 const form = document.querySelector('form')
 form.addEventListener('submit' , function(e){
@@ -317,7 +317,7 @@ setInterval(function(){
 },1000)
 
 
-//     Project-4 Random Number Generator and guess the right number
+//     Project-4 Random Number Generator and guess the right number    //
 
 //     step-1 to generate the random number
 let randomNumber = parseInt(Math.random()*100 +1 );
