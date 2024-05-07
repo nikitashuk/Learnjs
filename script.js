@@ -259,7 +259,7 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //     console.log( prompt("Enter the gussed number again: "))
 //   }
 
-//     Project-1 Color Changer
+//     Project-1 Color Changer //
 
 const buttons = document.querySelectorAll('.button')
 const body = document.querySelector('body')
