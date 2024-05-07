@@ -1,0 +1,53 @@
+.container {
+  background-color: blueviolet;
+  width: 45vw;
+  height: 34vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding: 8px;
+}
+.items {
+  background-color: brown;
+  border: none;
+  border-radius: 50%;
+  width: 2vw;
+  height: 4vh;
+  padding: 12px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: bolder;
+  color: white;
+  /* animation-name: trasitionEffect, identifier; */
+  /* animation-duration: 3s; */
+  /* animation-timing-function: cubic-bezier(0.76, 0.12, 0.04, 0.81); */
+  /* animation-delay: 1s;
+  animation-fill-mode: backwards; */
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: reverse; */
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  animation: trasitionEffect 3s linear infinite,
+    identifier 1s ease-out alternate;
+}
+/* ---animation--- */
+@keyframes trasitionEffect {
+  form {
+    /* transform: translateX(5000px); */
+    left: 0;
+  }
+  to {
+    /* transform: translateX(1000px); */
+    left: 100%;
+  }
+}
+@keyframes identifier {
+  form {
+    bottom: 0;
+  }
+  to {
+    /* transform: translateY(210px); */
+    bottom: 100%;
+  }
+}
