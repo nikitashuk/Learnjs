@@ -29,7 +29,7 @@
   left: 0px;
   bottom: 0px;
   animation: trasitionEffect 3s linear infinite,
-    identifier 1s ease-out alternate;
+    identifier 1s ease-out infinite alternate;
 }
 /* ---animation--- */
 @keyframes trasitionEffect {
