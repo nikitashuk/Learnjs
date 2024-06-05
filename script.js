@@ -172,7 +172,7 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // })
 // console.log(num2)
 
-// Problem no4 
+// Problem no4
 // let num1 = [2,4,6,8,9]
 // let num2 = num1.map((items) => {
 //   return items*items
@@ -180,14 +180,13 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // console.log(num2)
 
 // Problem no5
- // let num1 = [2,4,6,8,9]
- //  let num2 = num1.reduce((items, items1) => {
- //    return items*items1
- //  })
- //  console.log(num2)
+// let num1 = [2,4,6,8,9]
+//  let num2 = num1.reduce((items, items1) => {
+//    return items*items1
+//  })
+//  console.log(num2)
 //  function  getmyFunction (min, max)  {
 //     return(Math.floor(Math.random() * (max-min) + min))
-
 
 //  }
 // Math.random ()
@@ -210,11 +209,10 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //  }
 //  else {
 //     console.log("your guess is not correct try again")
-//  } 
-  
+//  }
+
 //  let num5 =   console.log(prompt("Enter the gussed number again: "))
 
- 
 //  else if ( num2<num3){
 //     console.log("gussed number is less than your gusssed number");
 //     console.log(prompt("Enter the gussed number again: "));
@@ -235,7 +233,7 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // //  else {
 // //     console.log("your guess is not correct try again")
-// //  } 
+// //  }
 // if (num3==num4) {
 //     num4 = prompt ("Enter the guessed number : ")
 //    num4 = Number.parseInt(num4)
@@ -261,227 +259,206 @@ let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //     Project-1 Color Changer //
 
-const buttons = document.querySelectorAll('.button')
-const body = document.querySelector('body')
-buttons.forEach(function  (button) {
-   button.addEventListener('click', function(e){
-    if(e.target.id==='red'){
-        body.style.backgroundColor = 'red';
+const buttons = document.querySelectorAll(".button");
+const body = document.querySelector("body");
+buttons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    if (e.target.id === "red") {
+      body.style.backgroundColor = "red";
     }
-    if(e.target.id==='grey'){
-        body.style.backgroundColor = 'grey';
+    if (e.target.id === "grey") {
+      body.style.backgroundColor = "grey";
     }
-    if(e.target.id==='yellow'){
-        body.style.backgroundColor = 'yellow';
+    if (e.target.id === "yellow") {
+      body.style.backgroundColor = "yellow";
     }
-    if(e.target.id==='green'){
-        body.style.backgroundColor = 'green';
+    if (e.target.id === "green") {
+      body.style.backgroundColor = "green";
     }
-   })
-})
+  });
+});
 
 //     Project-2 BMI Generator   //
 
-const form = document.querySelector('form')
-form.addEventListener('submit' , function(e){
-    //     to stop the data in  server loading
-    e.preventDefault();
+const form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+  //     to stop the data in  server loading
+  e.preventDefault();
 
-    const height = parseInt(document.querySelector('.height').value)
-    const weight = parseInt(document.querySelector('.weight').value)
-    const results = document.querySelector('.results')
-    
+  const height = parseInt(document.querySelector(".height").value);
+  const weight = parseInt(document.querySelector(".weight").value);
+  const results = document.querySelector(".results");
 
-    if(height === '' || height < 0 || isNaN(height) ){
-            //     Always in bactics(``)
-        results.innerHTML = `Please enter a valid height ${height}`;
-    }
-    else if (weight === '' || weight < 0 || isNaN(weight) ){
-            //     Always in bactics(``)
-        results.innerHTML = `Please enter a valid weight ${weight}`;
-    }
-    else{
-      const bmi =    (weight/ ((height*height)/ 10000)).toFixed(2);
-          //     Always in bactics(``)
-      results.innerHTML = `<span>${bmi}</span>`
-    }
-    
-})
+  if (height === "" || height < 0 || isNaN(height)) {
+    //     Always in bactics(``)
+    results.innerHTML = `Please enter a valid height ${height}`;
+  } else if (weight === "" || weight < 0 || isNaN(weight)) {
+    //     Always in bactics(``)
+    results.innerHTML = `Please enter a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //     Always in bactics(``)
+    results.innerHTML = `<span>${bmi}</span>`;
+  }
+});
 
 //     Project-3 to update the clock (display the time)
-const update = document.querySelector('.clock');
-setInterval(function(){
-    let date = new Date();
-    // console.log(date.toLocaleTimeString())
-    update.innerHTML = date.toLocaleTimeString();
-},1000)
-
+const update = document.querySelector(".clock");
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString())
+  update.innerHTML = date.toLocaleTimeString();
+}, 1000);
 
 //     Project-4 Random Number Generator and guess the right number    //
 
 //     step-1 to generate the random number
-let randomNumber = parseInt(Math.random()*100 +1 );
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 //     step-2 select all the elements
-const submit = document.querySelector('#subt');
-const userInput = document.querySelector('#guessField');
-const guessSlot = document.querySelector('.guesses');
-const  remaining =document. querySelector('.LastResult');
-const startOver = document.querySelector ('.resultparas');
-const LowOrHi = document.querySelector('.LowOrHi');
+const submit = document.querySelector("#subt");
+const userInput = document.querySelector("#guessField");
+const guessSlot = document.querySelector(".guesses");
+const remaining = document.querySelector(".LastResult");
+const startOver = document.querySelector(".resultparas");
+const LowOrHi = document.querySelector(".LowOrHi");
 
-  //     step-3 insert the values
-  const p = document.createElement('p')
+//     step-3 insert the values
+const p = document.createElement("p");
 
-
-   //     step-4 take the values 
+//     step-4 take the values
 let prevGuess = [];
 let numGuess = 1;
 let playGame = true;
 
- //     step-5 creating function for this
- if(playGame){
-    submit.addEventListener('click' , function(e){
-        e.preventDefault();
-       const guess =  parseInt(userInput.value);
-        validateGuess(guess);
-    })
- }
+//     step-5 creating function for this
+if (playGame) {
+  submit.addEventListener("click", function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    validateGuess(guess);
+  });
+}
 
-  //     step-5 creating function for this
+//     step-5 creating function for this
 
 //  for validate the number (number ki value minus m to nhi hai and 0 s chothi to nhi hai)
-function validateGuess(guess){
-    if (isNaN(guess) ){
-        alert('Please Enter the valid Number')
+function validateGuess(guess) {
+  if (isNaN(guess)) {
+    alert("Please Enter the valid Number");
+  } else if (guess < 1) {
+    alert("Please Enter a  Number more than 1 ");
+  } else if (guess > 100) {
+    alert("Please Enter a  Number less than 100 ");
+  } else {
+    prevGuess.push(guess);
+    if (numGuess === 11) {
+      displayGuess(guess);
+      displayMessage(`Game Over Random Number was ${randomNumber} `);
+      endGame();
+    } else {
+      displayGuess(guess);
+      checkGuess(guess);
     }
-    else if (guess < 1 ) {
-        alert('Please Enter a  Number more than 1 ')
-    }
-    else if (guess > 100 ) {
-        alert('Please Enter a  Number less than 100 ')
-    }
-    else{
-        prevGuess.push(guess)
-        if(numGuess===11){
-            displayGuess(guess);
-            displayMessage(`Game Over Random Number was ${randomNumber} ` );
-            endGame()
-        }
-        else{
-            displayGuess(guess)
-            checkGuess(guess)
-        }
-       
-
-    }
-
-
+  }
 }
 
 //  for check the number and print the message (number ki value minus m to nhi hai and 0 s chothi to nhi hai)
-function checkGuess(guess){
-    if(guess === randomNumber){
-        displayMessage(`your guess is right`)
-        endGame()
-        }
-        else if(guess < randomNumber){
-            displayMessage(`Number is too low`)
-
-    }
-    else if(guess > randomNumber){
-        displayMessage(`Number is too high`)
-    }
-
+function checkGuess(guess) {
+  if (guess === randomNumber) {
+    displayMessage(`your guess is right`);
+    endGame();
+  } else if (guess < randomNumber) {
+    displayMessage(`Number is too low`);
+  } else if (guess > randomNumber) {
+    displayMessage(`Number is too high`);
+  }
 }
 // for display the guessess (cleanup Method)
-function displayGuess(guess){
-    userInput.value = '';
-    guessSlot.innerHTML += `${guess}   `;
-    numGuess++;
-    remaining.innerHTML = `${11-numGuess}`;
+function displayGuess(guess) {
+  userInput.value = "";
+  guessSlot.innerHTML += `${guess}   `;
+  numGuess++;
+  remaining.innerHTML = `${11 - numGuess}`;
 }
 
 // for display the message (dom k sath interact krke message ko display krna)
-function displayMessage(message){
-    LowOrHi.innerHTML = `<h2>${message}</h2>`
-
+function displayMessage(message) {
+  LowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
 // for ending the game
-function endGame(){
-userInput.value = '';
-userInput.setAttribute('disabled' , '');
-p.classList.add('button')
-p.innerHTML = `<h2 id= "newgame"> Start new Game </h2>`
-startOver.appendChild(p)
-playGame = false;
-newGame()
-
+function endGame() {
+  userInput.value = "";
+  userInput.setAttribute("disabled", "");
+  p.classList.add("button");
+  p.innerHTML = `<h2 id= "newgame"> Start new Game </h2>`;
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
 }
 
 // for start the game(game k kahatam hone pr user phr s game start kr sake)
-function newGame(){
-    const newGameButton = document.querySelector('#newgame');
-    newGameButton.addEventListener('click', function(e){
-        randomNumber = parseInt(Math.random()*100 +1 );
-        prevGuess = [];
-        numGuess = 1;
-        guessSlot.innerHTML = '';
-        remaining.innerHTML =`${11-numGuess}`;
-        userInput.removeAttribute('disabled');
-        startOver.removeChild(p)
-        playGame = true;
-
-    })
-
+function newGame() {
+  const newGameButton = document.querySelector("#newgame");
+  newGameButton.addEventListener("click", function (e) {
+    randomNumber = parseInt(Math.random() * 100 + 1);
+    prevGuess = [];
+    numGuess = 1;
+    guessSlot.innerHTML = "";
+    remaining.innerHTML = `${11 - numGuess}`;
+    userInput.removeAttribute("disabled");
+    startOver.removeChild(p);
+    playGame = true;
+  });
 }
-
 
 //     Project-5 Image hider
- const hider = document.querySelector('.img-list');
- hider.addEventListener('click', function(e){
+const hider = document.querySelector(".img-list");
+hider.addEventListener(
+  "click",
+  function (e) {
     e.target.parentNode.remove(e); //     ParentNode s pura tag select hota hai
-    
- },false)
-
+  },
+  false
+);
 
 //     Project-6 Random color generator and by clicking the button to change the color automatic and also there one stop button
-const randomColor = function(){
-    const hex = '0123456789ABCDEF';
-    let color = '#';
-    for(let i = 0 ; i < 6; i++ ){
-        color += hex[Math.floor(Math.random()*16)];
-    }
-    return color;
-
-  
+const randomColor = function () {
+  const hex = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
 };
-// console.log(randomColor()); 
+// console.log(randomColor());
 let intervalid;
-startchangingcolor = function() {
-    const colorchange = document.querySelector('.colorchanger');
+startchangingcolor = function () {
+  const colorchange = document.querySelector(".colorchanger");
 
-  intervalid =    setInterval(changebgcolor ,1000);
- function  changebgcolor (){
+  intervalid = setInterval(changebgcolor, 1000);
+  function changebgcolor() {
     colorchange.style.backgroundColor = randomColor();
-}
+  }
+};
 
-}
+stopchangingcolor = function () {
+  clearInterval(intervalid); // reference of settimeout()
+  console.log("stopped");
+};
 
-stopchangingcolor = function() {
-    clearInterval(intervalid); // reference of settimeout()
-    console.log('stopped');
- }
-
-
-const start = document.querySelector('#start').addEventListener('click',startchangingcolor);
-const stop = document.querySelector('#stop').addEventListener('click',stopchangingcolor);
+const start = document
+  .querySelector("#start")
+  .addEventListener("click", startchangingcolor);
+const stop = document
+  .querySelector("#stop")
+  .addEventListener("click", stopchangingcolor);
 
 //     Project-7 keyboard key check
-const insert = document.querySelector('.insert');
-window.addEventListener('keydown',(e) => {
-    insert.innerHTML = `
+const insert = document.querySelector(".insert");
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
     <div class = "table" >
 <table>
   <tr>
@@ -490,7 +467,7 @@ window.addEventListener('keydown',(e) => {
     <th>code</th>
   </tr>
   <tr>
-    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.key === " " ? "Space" : e.key}</td>
     <td>${e.keyCode}</td>
     <td>${e.code}</td>
   </tr>
@@ -498,6 +475,15 @@ window.addEventListener('keydown',(e) => {
 </table>
      </div>
      `;
-    console.log(e.key);
-
+  console.log(e.key);
 });
+//     Project-8 task
+function MyIndex() {
+  let index = " ",
+    i;
+  for (i = 0; i < 5; i++) {
+    index = index + "btn-1" + i + "<br>";
+  }
+  document.querySelector(".btn-index").innerHTML = index;
+  console.log(index);
+}
