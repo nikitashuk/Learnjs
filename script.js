@@ -483,7 +483,7 @@ function MyIndex() {
     i;
   for (i = 0; i < 5; i++) {
     index = index + "btn-1" + i + "<br>";
+    document.querySelector(".btn-index").innerHTML = index;
+    console.log(index);
   }
-  document.querySelector(".btn-index").innerHTML = index;
-  console.log(index);
 }
